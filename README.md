@@ -1,2 +1,2 @@
-# s15_DeRaad_data_lecture_notes
-Data Engineering Lecture Notes
+# Data Engineering Lecture Notes Spring 2015
+## Lecture 1
