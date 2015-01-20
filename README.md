@@ -89,3 +89,86 @@ Representation State Transfer
 ***
 ### Review Ruby example
 	* Sinatra used for prototype not production
+	
+***
+## Lecture 3
+
+### Restful Web Services
+
+***
+ Operations on a single resource
+
+* REST is an architectural style for web services
+	* An approach to developing web services that mimics the design of the Web itself
+	* Your services provides access to a linked set of resources
+	* For each resource you can perform services similar to HTTP operations. (See previous lecture for operations)
+* Examples
+	* GET /api/1.0/users
+		* 1.0 is the version number, great for deploying new versions without conflict
+		* Retrieve a list of all users.
+	* GET /api/1.0/users/0
+		* Retrieve the details of User 0.
+	* POST /api/1.0/users
+		* Create a new user
+	* PUT ../users/0
+		* Update User 0.
+	* DELETE ../users/0
+		* Delete User 0.
+	* GET ../search?q=tattersail
+		* Perform a search with the query tattersall.
+* Each operation may produce a result
+	* With RESTful services, JSON format is king
+* POST and PUT methods typically send data
+	* JSON Format
+	* In URL or body of HTTP request
+		* GET-data may appear as query params
+	* HTML and XML also possible
+	* Authentication data appears in HTTP headers
+
+***
+Operations on two/multiple resources
+
+* Nested Approach
+	* GET ../posts/0/comments/1
+		* Get the first comment on post 0.
+	* POST ../posts/0/comments
+		* Create a new comment on post 0.
+* Alternate approach 
+	* While performing an operation on one resource, you referernce another resource
+* Issues
+	* Security: How do you authenticate users?
+	* Identity: How are ids assigned to resources?
+	* Failure: How do we handle failure situations?
+		* In the example today, handled in JSON
+		* HTTP status codes could have been used i.e. 404
+		* Most series will us a combination of both
+	* Persistence: How are resources stored?
+
+### Example
+
+* Contacts Web Service
+* Implemented in both Ruby and Javascript
+* Technology Used
+	* Sinatra
+	* Rspec
+	* Typhoeus
+	* Node
+	* Express
+
+* Web Service about contacts
+	* Details stored in the model object
+		* Search a contact
+		* Query birthday 
+		* Query upcoming birthdays
+		* Summary response/full response using a hash table that is created on the fly
+	* Client Side
+		* Handle Request 
+			* Handle error responses
+			* Reference a url, http request, and possible data
+	* Client Side Test
+		* Rspec should explain what went wrong in natural language
+			* i.e. “should list available contacts”
+		* Reset each test after completion
+			* Each test should be independent of one another. 
+	* Server Side Test
+		* Independent of clients and network connections is our server correct.
