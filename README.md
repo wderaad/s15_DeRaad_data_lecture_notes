@@ -172,3 +172,28 @@ Operations on two/multiple resources
 			* Each test should be independent of one another. 
 	* Server Side Test
 		* Independent of clients and network connections is our server correct.
+		
+***
+
+## Lecture 4
+
+### Git Version Control
+
+“Mastering Git”
+
+### GitHub
+
+#### Workflow
+
+* Branch and merging is preferred over rebasing
+* Pull Request for adding a finished branch containing a new feature to the master branch (production)
+
+### Web Service Challenge
+
+``` 
+http://epic-analytics.cs.colorado.edu:4000/
+‘/api/1.0/methods’
+```
+
+### Contact Server JavaScript
+Review Code Base
