@@ -197,3 +197,27 @@ http://epic-analytics.cs.colorado.edu:4000/
 
 ### Contact Server JavaScript
 Review Code Base
+
+***
+
+## Lecture 5
+
+### NODE.JS
+- Server side Javascript
+- Most code in node is packaged inside of a module
+- Listen connects the server to the port and local host
+- console.log() - prints to standard out
+“If there is no future work remaining node will shut down.”
+### Event Loop
+- Add processes to the event loop using the following:	
+	- process.nextTick() “Execute on the next iteration of the event loop, prioritize over any IO related callbacks”
+	- setImmediate() “Same as next tick but let IO callbacks process first”
+	- setTimeout() “Takes a parameter that specifies how long to wait before the function is called, not guaranteed exact”
+	- setInterval() “Takes a parameter that specifies how often the function be called (i.e. 1000 (ms) - 1 second intervals)”
+- Can cause “callback hell”, which can be solved with closures. 
+### Node Execution Model
+- For user-written code, Node is single threaded!
+- Any code that you write is guaranteed to be synchronous
+- You do not have to worry about race conditions
+- IO is handled in parallel
+- If you issue an asynchronous call for IO - your callback is registered
