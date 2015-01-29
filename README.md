@@ -221,3 +221,17 @@ Review Code Base
 - You do not have to worry about race conditions
 - IO is handled in parallel
 - If you issue an asynchronous call for IO - your callback is registered
+
+***
+
+## Lecture 6
+
+### Express 
+* Web Application framework written in Javascript for use in Node.js
+* Its design was influenced by Sinata
+* Express makes it easy to define the endpoint of your web-base service
+* Minimal Framework. It is designed to be augmented with node packages using middleware
+Example
+#### Example
+* Install express
+* Install necessary middleware
