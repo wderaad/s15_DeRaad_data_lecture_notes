@@ -233,5 +233,51 @@ Review Code Base
 * Minimal Framework. It is designed to be augmented with node packages using middleware
 Example
 #### Example
-* Install express
+* Install expresss
 * Install necessary middleware
+
+***
+
+## Lecture 7
+
+### ANGULARJS
+* Web Application that lives on the client-side 
+* Written in Javascript	
+* Provides an implementation of MVC
+* Client side designed to live on top of JSON-base RESTful services
+#### Core Concepts
+* Data Bindings 
+	* The value of an HTML tag can be associated with a model object, stored in the controller. Angular updates the other whenever one changes. 
+* Controllers
+	* Associated with a portion of your HTML page, defines all of the states and methods that can be accessed in that section of the page
+	* Modularize your web app, and decompose data and functionality into small manageable tasks. 
+* Services
+	* Controllers are used to merge data for some portion of a page “while its being displayed”. Controllers come and go.
+	* To maintain a state between controllers you can create a services
+	* Services are created when Angular app is initialized and remains for the app life cycle
+* Directives
+	* Primary use is to allow Angular to integrate into HTML naturally
+	* Can be used to create reusable components that combine controllers, data and HTML
+		* i.e. you can create a login form components, that can be re-used across multiple objects
+* Embeddable
+	* Angular can control as much or as little of a web page
+	* Easy to embed a small Angular component into an existing page
+* Injectable
+	* Dependency injection (Employee/Database Example)
+	* Angular’s system locate dependencies at run-time and inject them into the component that needs them
+#### Modules
+* A module is the primary way to package up a set of controllers into an Angular app
+* To create a module, git it a name and its its dependencies
+``` angular.module(‘contactsApp’,[]) ```
+This creates a module called contactsApp with dependencies []
+* Once you have a module defined in Javascript, you can tell Angular where it lives in the html with the ng-app directive
+#### Controllers
+* You need a controller to do anything
+* Controllers are declared using the controller function
+``` angular.module(‘contactsApp’).controller(‘MainController’,[<dependencies and code.]) ```
+* Controller example with two-way data binding
+#### Directives
+* ng-show : display an HTML element if a contition 
+* ng-hide
+* ng-repeat 
+
