@@ -208,6 +208,7 @@ Review Code Base
 - Listen connects the server to the port and local host
 - console.log() - prints to standard out
 “If there is no future work remaining node will shut down.”
+
 ### Event Loop
 - Add processes to the event loop using the following:	
 	- process.nextTick() “Execute on the next iteration of the event loop, prioritize over any IO related callbacks”
@@ -215,6 +216,7 @@ Review Code Base
 	- setTimeout() “Takes a parameter that specifies how long to wait before the function is called, not guaranteed exact”
 	- setInterval() “Takes a parameter that specifies how often the function be called (i.e. 1000 (ms) - 1 second intervals)”
 - Can cause “callback hell”, which can be solved with closures. 
+
 ### Node Execution Model
 - For user-written code, Node is single threaded!
 - Any code that you write is guaranteed to be synchronous
@@ -245,6 +247,7 @@ Example
 * Written in Javascript	
 * Provides an implementation of MVC
 * Client side designed to live on top of JSON-base RESTful services
+
 #### Core Concepts
 * Data Bindings 
 	* The value of an HTML tag can be associated with a model object, stored in the controller. Angular updates the other whenever one changes. 
@@ -265,19 +268,34 @@ Example
 * Injectable
 	* Dependency injection (Employee/Database Example)
 	* Angular’s system locate dependencies at run-time and inject them into the component that needs them
+
 #### Modules
 * A module is the primary way to package up a set of controllers into an Angular app
 * To create a module, git it a name and its its dependencies
 ``` angular.module(‘contactsApp’,[]) ```
 This creates a module called contactsApp with dependencies []
 * Once you have a module defined in Javascript, you can tell Angular where it lives in the html with the ng-app directive
+
 #### Controllers
 * You need a controller to do anything
 * Controllers are declared using the controller function
 ``` angular.module(‘contactsApp’).controller(‘MainController’,[<dependencies and code.]) ```
 * Controller example with two-way data binding
+
 #### Directives
 * ng-show : display an HTML element if a contition 
 * ng-hide
 * ng-repeat 
+
+***
+## Lecture 8
+
+### Angular Example
+* index.html
+	* Javascript included in bottom of body
+	* Bootstrap used for styling
+* Angular app is on the client side
+* Node app is on the server side
+* When Angular is given a promise it waits till they all succeed until loading the page
+* Promise library is called using $q 
 
