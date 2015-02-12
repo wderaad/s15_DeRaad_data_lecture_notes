@@ -331,5 +331,18 @@ self.update = function(){
 * Checkout twitter developer site
 	* Bottom right > manage your apps
 
-
+***
+## Lecture 10
+* Consumer keys, Access tokens
+	* Access to Twitter’s APIs are secured by OAuth
+		* OAuth is a Web-based service inceptions with users and applications
+	* With Twitters a consumer key identifies a particular app/developer
+	* Allows an application to act on behalf of many users
+		* you might ship you app with its consumer keys but with no access tokens. 
+		* Then when you launch the app, it allows the user to sign into your twitter account.
+			* Twitter will then send an access token/secret for you application to store on behalf of the user. 
+	* We circumvent the account long in step by creating access token on the developer app creation
+* Install **rbenv** and **ruby-build**
+* Review lecture notes to run get_tweets
+* Twitter requires we sign every request with an Authorization header
 
