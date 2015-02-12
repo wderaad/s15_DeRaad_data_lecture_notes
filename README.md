@@ -299,3 +299,37 @@ This creates a module called contactsApp with dependencies []
 * When Angular is given a promise it waits till they all succeed until loading the page
 * Promise library is called using $q 
 
+***
+## Lecture 9
+
+### Javascript and Angular
+
+View Javascript Readme.md explaining the use of the following:
+
+```
+var self = this;
+self.data - “Interesting!”;
+self.update = function(){
+	self.data = “Even More Interesting!”;
+}
+```
+* Reviews:
+	* Implicit Bindings
+	* Explicit Bindings
+
+* IIFES
+	* Follows the module pattern
+	* **Javascript - ”Blocks do not create scope functions do!”**
+``` 
+(function( param ) {
+	<function body>
+} (actual));
+``` 
+
+### Getting data from twitter
+* Reactivate twitter account
+* Checkout twitter developer site
+	* Bottom right > manage your apps
+
+
+
