@@ -346,3 +346,69 @@ self.update = function(){
 * Review lecture notes to run get_tweets
 * Twitter requires we sign every request with an Authorization header
 
+***
+## Lecture 11
+
+### Class Hierarchy 
+
+* Twitter Request
+	* RateLimits
+	* Max Id Request
+		* Timeline
+		* Search Api
+	* Streaming Twitter Request
+		* Filter Track Stream
+		* Public Strema
+	* Cursor Request
+		* Friends Id
+		* Follower Id
+
+***
+
+* Contracts are created using interfaces in statically-typed lungs such as java
+* In dynamically-typed languages like ruby fail fast
+
+### Param and Props
+
+* Added Features
+	* Ability to control if a parameter is included in a reduces 
+	* Ability to display parameter that are being sent in a request
+
+### Logging
+
+* Logging helper is used to create a default logger
+	* Created in TwitterRequest’s constructor
+	* Accessed using the log attribute
+
+### Rates
+
+* Helper invokes a twitter endpoint to get the app’s current set of rate limits
+	* Limits stored in a class variable to be shared across all TwitterRequest instances
+
+### Requests
+
+* MaxIdRequest
+	* Subclass for endpoints that need to traverse timelines with max_id parameters
+* CursorRequest
+	* Similar to MaxId however it does not need to define a contract for subclasses
+	* Can implement all required functionality directly
+
+### Timeline
+
+Loops until all tweets are accessed or 16 request are successful
+
+### Search 
+
+Loop until we see zero tweets returned 
+
+### Streaming Twitter Request
+
+* Collect method is designed to run forever
+* Create event handlers on streaming request 
+	* on_headers: Response has started to stream back to us
+	* on_body: Some data has been received from the server to process	
+	* on_complete: Response has finished, can be used to determine to close connection
+* Client Side
+	* Can call request shutdown method
+### Homework 3 Available
+
