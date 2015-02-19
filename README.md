@@ -2,9 +2,9 @@
 
 # Spring 2015
 
+***
 ## Lecture 1
 
-***
 ### Associated with Big Data
 
 * Social Networking
@@ -174,7 +174,6 @@ Operations on two/multiple resources
 		* Independent of clients and network connections is our server correct.
 		
 ***
-
 ## Lecture 4
 
 ### Git Version Control
@@ -199,7 +198,6 @@ http://epic-analytics.cs.colorado.edu:4000/
 Review Code Base
 
 ***
-
 ## Lecture 5
 
 ### NODE.JS
@@ -225,7 +223,6 @@ Review Code Base
 - If you issue an asynchronous call for IO - your callback is registered
 
 ***
-
 ## Lecture 6
 
 ### Express 
@@ -239,7 +236,6 @@ Example
 * Install necessary middleware
 
 ***
-
 ## Lecture 7
 
 ### ANGULARJS
@@ -327,12 +323,14 @@ self.update = function(){
 ``` 
 
 ### Getting data from twitter
+
 * Reactivate twitter account
 * Checkout twitter developer site
 	* Bottom right > manage your apps
 
 ***
 ## Lecture 10
+
 * Consumer keys, Access tokens
 	* Access to Twitter’s APIs are secured by OAuth
 		* OAuth is a Web-based service inceptions with users and applications
@@ -412,3 +410,86 @@ Loop until we see zero tweets returned
 	* Can call request shutdown method
 ### Homework 3 Available
 
+***
+## Lecture 12
+
+Homework 3 now available
+
+### Document Database
+
+Resources: 
+
+* “Big Data: Principles and best practices of scalable realtime data systems”
+* “Making Sense of NoSQL: A guide for managers and the rest of us”
+
+#### Scaling with Traditional Databases
+
+Example:
+
+* “Imagine you’ve been asked to build a system that keeps track of page views on particular URLS
+* Figure: Traditional Table
+* Leads to issues when your application gets popular
+	* Solution add a queue between your web server and the database code
+	* Not a true solution
+		* Adding workers to paralyze the queue doesn’t work because the database is the bottleneck
+* Solutions:
+	* Vertical Scaling:
+		* Short term solution:
+			* New Equipment - High Cost
+			* Implement Cache in-between database and server, only allow writes to database. All reads hit queue
+	* Shard the database:
+		* Multiple copies of the database
+			* Create several instances of the database. (Most likely on separate machines
+			* Partition data across those databases
+				* Develop a partition strategy, perhaps MD5 hash some aspect of the input data and then mod that value by the number of shards. 
+				* Write the data indicated shard
+* Not great solution due to shard failure and added application complexity
+	* Fault tolerance is hard
+	* Complexity is pushed to the application layer
+
+#### NoSQL
+
+* NoSQL databases are ones which are aware of their distributed nature
+	* The manage sharing and replication
+	* They are horizontally scalable
+		* If you need more disk space, add a server
+		* If you need computation to go faster, add a server
+* Avoid mutable data
+	* If a value changes you write a new immutable copy of the updated data
+* Fault tolerant
+
+#### Types of NoSQL Databases
+
+* Key-Value
+	* Database Hash Table
+	* Values are un-typed
+	* Simple
+* Graphs
+	* Databases optimized to store graph structures
+	* Provide structural query languages
+	* Efficiently traverse graphs
+	* Shortest path between nodes
+* Columnar
+	* Column Family Stores
+	* Able to scale to enormous amounts of data
+	* Able to achieve fast writes
+		* While still maintaining reasonable read performance
+	* Netflix uses Cassandra to store and serve movies 
+	* Column families can think of as a table
+		* Consists of rows that have unique row keys
+			* Rows consist of columns
+				* Columns consist of a key and a value pair
+	* Essentially hash tables all the way down
+	* Grouped Rows on disk
+* Documents
+	* Similar to key-value with a little more structure
+	* You enter documents (a bag of key-value pairs)
+
+**Why NoSQL?** 
+There is no schema. 
+There is nothing that says: in column 5 of table 2, you will find an int: in column 6, you’ll find a VARCHAR, etc. 
+You are often free to store anything in one of these databases
+* Examples:
+	* Document Stores:	
+		* Each document can have a different set of key value pairs (name, location, birthday), (pet, bird, age)
+	* Columnar Store: each row in a columnar store can have different columns 
