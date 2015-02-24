@@ -493,3 +493,36 @@ You are often free to store anything in one of these databases
 	* Document Stores:	
 		* Each document can have a different set of key value pairs (name, location, birthday), (pet, bird, age)
 	* Columnar Store: each row in a columnar store can have different columns 
+
+***
+## Lecture 13
+
+### CouchDB
+
+* Document NoSQL Database
+	* Stores documents
+	* Each document contains everything that might be needed by an app
+	* No schema is enforced: each document can have different attributes
+		* Allows for natural modeling of domains
+* Written in Erlang
+	* Built in support for concurrency
+	* Built in fault 
+* Design braces the web
+	* RESTful API
+	* Built for Distribution
+* CAP Theorem: **(Pick any two)**
+	* **Consistency**: All clients see the same data even in the presence of concurrent updates
+	* **Availability**: All clients are able to read or write the data store when they want
+	* **Partition Tolerance**: A database can be split across multiple servers
+* CouchDB chooses: **Availability and Partition Tolerance**
+
+#### CouchDB Internal:
+
+* B-Tree storage engine
+	* Automatic sorting; Allows searches, insertions, and deletions to occur in ```O(lg)```
+* Employs MapReduce over this B-Tree to compute views of the data; allows for parallel and incremental computation
+* No Locking
+* Validation: Validation functions can be written in JS for a particular class of documents
+	* Safeguard against malicious data 
+* Incremental Replication
+* Merge Conflicts
