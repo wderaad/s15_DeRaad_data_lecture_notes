@@ -526,3 +526,16 @@ You are often free to store anything in one of these databases
 	* Safeguard against malicious data 
 * Incremental Replication
 * Merge Conflicts
+
+***
+## Lecture 14
+
+### MongoDB
+
+* Indexes: B-Trees
+* CAP Theorem:
+	* Consistency
+	* Availability
+* Documents order hierarchically  
+* Type and Case Sensitive
+
