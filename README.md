@@ -539,3 +539,17 @@ You are often free to store anything in one of these databases
 * Documents order hierarchically  
 * Type and Case Sensitive
 
+***
+## Lecture 16
+
+### MongoDB Indexes
+
+* Use mongo Ruby gem to access MongoDB
+* Convert created_at from string to times object
+	* ``` t = DateTime.parse(“Sun Feb 15 02:41:32 +0000 2015”)```
+	* ``` return t.to_time.utc ```
+* Coordinate fields: used for geospatial queries
+* ```explain``` function will return information about how DB will process any given query
+* Indexes are stored on collections, not databases
+
+
