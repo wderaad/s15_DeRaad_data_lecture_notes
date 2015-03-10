@@ -552,4 +552,35 @@ You are often free to store anything in one of these databases
 * ```explain``` function will return information about how DB will process any given query
 * Indexes are stored on collections, not databases
 
+***
+## Lecture 17
+
+### More on Indexes
+
+* Can greatly reduce the number of documents that need to be examined to satisfy a query
+* Index Cardinality
+	* Number of possible values for an indexed field
+		* A field like **employment status** has low cardinality since it has two values yes/no
+		* Where as **name** has high carnality
+	* In general you only want indexes on high cardinality fields
+* Compound indexes can be difficult
+	* Example sort by : ```user.created_at``` (oldest to youngest); ```created_at``` (most recent tweet to oldest tweet)
+	* Reverse sort is: ```db.tweets.find().sort({‘user.created_at’:-1,’create_at’:1})```
+	* Enable different queries:
+		* Point Queries: search for a single value, then traverse index (either direction)
+		* Multi-Value Queries: search for a range of values
+* Full-Text Indexes
+	* Support for a full text search
+	* Only one full-text index per collection
+* Geospatial Indexes
+	* Cartesian Index
+	* Spherical Index: 2dsphere
+		* GeoJSON format
+			* Supports points, lines, and polygons
+
+### Map Reduce
+
+* Ability to create a new collection from an old collection
+	* ```db.tweets.mapReduce(map, reduce, {out: "users”});```
+
 
