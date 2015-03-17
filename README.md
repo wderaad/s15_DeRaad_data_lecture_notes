@@ -583,4 +583,38 @@ You are often free to store anything in one of these databases
 * Ability to create a new collection from an old collection
 	* ```db.tweets.mapReduce(map, reduce, {out: "users”});```
 
+***
+## Lecture 18
+
+***
+### Apache Solr
+
+* Lucene
+	* High-performance text search engine library
+	* Inverted index - store the keywords of the documents in the index
+* CU FCQ - Example
+	* Searches three tables
+	* DB - 100,000 rows
+	* Excel to DB
+* Solr has a REST API
+	* Runs as a server
+
+***
+### Redis
+
+* Key Value Store “Data-structure server”
+* Not a database replacement
+* Use for fast real-time data applications
+
+***
+### Kafka
+
+* How to process data coming in real time.
+	* Distributed
+	* Fault-tolerant
+	* High-throughput	
+	* Publish-subscribe
+	* Message system
+* Publish - Subscriber
+* Kafka relies on ZooKeeper for distributed falt tolerance
 
