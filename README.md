@@ -618,3 +618,23 @@ You are often free to store anything in one of these databases
 * Publish - Subscriber
 * Kafka relies on ZooKeeper for distributed falt tolerance
 
+***
+## Lecture 19
+
+### Kafka Demo
+* Fake twitter data through a framework stack
+* Output to a web client
+
+### Memcached
+
+* Distributed memory object caching system
+* Large hash table
+	* Keys up to 250 bytes
+* Data is disposable
+* Cluster is flat
+
+### Document DB (On Azure)
+
+* Schema-free
+* Indexing database
+	* Automatically index documents added to DB
