@@ -638,3 +638,30 @@ You are often free to store anything in one of these databases
 * Schema-free
 * Indexing database
 	* Automatically index documents added to DB
+
+***
+## Lecture 20
+
+### Neo4J
+
+* Graph based database
+	* NoSQL
+	* Whiteboard Friendly
+		* Easy visualization
+	* Relationship Focused
+		* Edges are most important
+	* Java Based
+		* Open Source
+* Fast for associative data sets
+* Typically implemented on a single server versus a cluster
+
+### HBase
+
+* Hadoop Database
+	* Open source distributed column-oriented
+* Provides big table capabilities on top of Hadoop
+* Table schema defines only column families
+* Each cell value of the table has a timestamp
+	* Automated versioning
+* Used for lot of incoming data
+	* Large amount of client/request
