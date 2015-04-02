@@ -665,3 +665,32 @@ You are often free to store anything in one of these databases
 	* Automated versioning
 * Used for lot of incoming data
 	* Large amount of client/request
+
+***
+## Lecture 21
+
+### Riak
+
+* Key-Value Store Database
+* NoSQL
+* No Master node
+	* Every node is a Master & Slave
+* Scaling: Value of key defines which node the key will be stored on
+* Written in Erleng
+
+### Cassandra
+
+* Scaled NoSQL database
+* Elastic scalability
+* Always on architecture
+* Fast linear-scale performance
+
+### Indexing in Cassandra
+
+* Insert rows similar to SQL
+* Composite Columns w/ primary key
+* Clustering column sorts the data
+	* One or more partition keys
+	* Zero or more clustering column
+* Secondary Indexes	
+	* Cassandra provides support to add indexes over column values
