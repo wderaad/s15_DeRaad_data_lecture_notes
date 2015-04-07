@@ -694,3 +694,34 @@ You are often free to store anything in one of these databases
 	* Zero or more clustering column
 * Secondary Indexes	
 	* Cassandra provides support to add indexes over column values
+
+***
+## Lecture 22
+
+### Javascript Closures and Design Patterns
+
+* Scope
+	* Example
+* Closure
+* Module Design Pattern
+* Inheritance vs Prototype
+* this
+	* new Name()
+		* refers to object it returns
+	* explicit
+	* implicit
+	* default
+
+### Ruby on Rails
+
+* Ruby
+	* No default function overloading
+	* Able to return multiple values
+* Rails framework
+	* Gem setup
+
+### Flask
+
+* Micro framework
+* Written in Python
+* Testing is made ease with Flaskr
