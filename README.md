@@ -725,3 +725,44 @@ You are often free to store anything in one of these databases
 * Micro framework
 * Written in Python
 * Testing is made ease with Flaskr
+
+***
+## Lecture 23
+
+***
+### Hadoop
+* MapReduce
+* Master/Slave
+
+***
+### Spark
+* Fast Data Sharing
+* MapReduce+
+* Cluster Wide Caching
+
+***
+### Apache Storm
+* Stream Processing
+* Guaranteed Message Processing
+
+***
+## Lecture 24
+
+***
+### React
+
+* Released by Facebook
+* Maintains a virtual DOM
+* One-way state binding
+* JSX
+	* Creates javascript objects using html syntax
+
+
+***
+### Sinatra
+
+***
+### Flux
+
+* Single directional data flow
+* Built by Facebook to combat scalability of MVC
