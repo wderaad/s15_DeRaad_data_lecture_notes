@@ -766,3 +766,32 @@ You are often free to store anything in one of these databases
 
 * Single directional data flow
 * Built by Facebook to combat scalability of MVC
+
+***
+## Lecture 25
+
+### Google Cloud Platform
+
+* Support Python, Java, PHP and Go 
+* Google handles shading, load balancing, traffic splitting, elasticity, ect . . .
+* Use Google fiber between Data Centers
+* Data transmitted and stored in encrypted form 
+* Three tiers of Cloud Storage
+* Cloud SQL
+	* Pay per use
+
+### Docker
+
+* Open-source engine that automates deployment of apps into containers
+* Fight against dependency discrepancy
+* Containers
+	* Created from images
+	* Isolated environment
+
+### Capistrano
+
+* Automated Server Deployment
+	* Uses Rake DSL for tasks
+	* Written in Ruby
+* Can create custom tasks 
+* Automate task for pulling repo to server
