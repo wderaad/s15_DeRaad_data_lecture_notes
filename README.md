@@ -795,3 +795,24 @@ You are often free to store anything in one of these databases
 	* Written in Ruby
 * Can create custom tasks 
 * Automate task for pulling repo to server
+
+***
+## Lecture 26
+
+### Turf
+
+* GeoJSON
+* More for analysis than visualization
+
+### JavaSript InfoVis Toolkit
+
+* Library to create interactive data visualization on the web
+* Composeable:
+	* Combine multiple visualization into one
+* Data is stored in static JSON objects
+
+### Flask
+
+* BSD
+* Very extendable
+* Uses ```pip install flask```
