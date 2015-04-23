@@ -761,6 +761,8 @@ You are often free to store anything in one of these databases
 ***
 ### Sinatra
 
+* Presented
+
 ***
 ### Flux
 
@@ -816,3 +818,29 @@ You are often free to store anything in one of these databases
 * BSD
 * Very extendable
 * Uses ```pip install flask```
+
+***
+## Lecture 27
+
+### D3 
+
+*	select
+* bind
+
+### Leaflet
+
+* Layering
+* MultiPlatform
+* Call maps
+
+### Vega
+
+* Presented
+
+### Epic
+
+* Epic Collect (Data Storage)
+	* Keyword Tweets
+	* Context Tweets
+
+
