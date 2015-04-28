@@ -843,4 +843,32 @@ You are often free to store anything in one of these databases
 	* Keyword Tweets
 	* Context Tweets
 
+***
+## Lecture 28
 
+### JavaScrip Async and Promises
+
+* Event Loop
+* Callback
+* Promises
+	* Chain
+
+### Titan
+
+* Graph Database
+
+### Amazon Web Services
+
+* Cloud computing
+* Computing
+* Networking
+	* DNS
+	* VPC
+	* Amazon DirectConnect
+* Storage
+* DynamoDB - Precursor to Cassandra
+
+### Epic
+
+* Use Hadoop to sort
+* Solr 
