@@ -872,3 +872,9 @@ You are often free to store anything in one of these databases
 
 * Use Hadoop to sort
 * Solr 
+
+***
+## Lecture 29
+
+***Final Presentations***
+
